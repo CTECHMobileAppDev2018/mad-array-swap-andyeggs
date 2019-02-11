@@ -3,21 +3,22 @@ import java.util.Arrays;
 class ArraySwapper {
   
   // This method assumes you only have 2 items in your array
-  public void arraySwap(int []inputArray) {
+  public void arraySwap(int[] inputArray) {
     
     // Swap the two items in "inputArray" and return the output
-    // put your code here
-    int temp;
-        
+    int temp = inputArray[0];
+    inputArray[0] = inputArray[1];
+    inputArray[1] = temp;
   }
   
   // This method swaps any 2 items in any array
-  public void arraySwapAny2(int []inputArray, int loc1, int loc2) {
+  public void arraySwapAny2(int[] inputArray, int loc1, int loc2) {
     
     // Swap the two items in "inputArray" and return the output
     // Remember to make sure that loc1 and loc2 are valid positions in the array!
-    int temp;
-        
+    int temp = inputArray[loc1];
+    inputArray[loc1] = inputArray[loc2];
+    inputArray[loc2] = temp;
   }
 
   
