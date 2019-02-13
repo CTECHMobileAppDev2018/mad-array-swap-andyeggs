@@ -6,9 +6,15 @@ class ArraySwapper {
   public void arraySwap(int[] inputArray) {
     
     // Swap the two items in "inputArray" and return the output
-    int temp = inputArray[0];
-    inputArray[0] = inputArray[1];
-    inputArray[1] = temp;
+    try {
+      if (inputArray.length != 2) { return; }
+      int temp = inputArray[0];
+      inputArray[0] = inputArray[1];
+      inputArray[1] = temp;
+    } catch (ArrayIndexOutOfBoundsException e) {
+      System.out.println("Error! arraySwap");
+      return;
+    }
   }
   
   // This method swaps any 2 items in any array
@@ -16,9 +22,14 @@ class ArraySwapper {
     
     // Swap the two items in "inputArray" and return the output
     // Remember to make sure that loc1 and loc2 are valid positions in the array!
-    int temp = inputArray[loc1];
-    inputArray[loc1] = inputArray[loc2];
-    inputArray[loc2] = temp;
+    try {
+      int temp = inputArray[loc1];
+      inputArray[loc1] = inputArray[loc2];
+      inputArray[loc2] = temp;
+    } catch (ArrayIndexOutOfBoundsException e) {
+      System.out.println("Error! arraySwapAny2: Swap locations invalid.");
+      return;
+    }
   }
 
   
